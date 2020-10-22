@@ -1,9 +1,20 @@
-/**
- * @format
- */
+import React, { Component } from 'react';
+import {
+  AppRegistry,
+  StyleSheet,
+  Text,
+  View
+} from 'react-native';
 
-import {AppRegistry} from 'react-native';
-import App from './App';
-import {name as appName} from './app.json';
+// importar o componente barra navegação
+import BarraNavegacao from './src/components/BarraNavegacao';
 
-AppRegistry.registerComponent(appName, () => App);
+export default class app5 extends Component {
+  render() {
+    return(
+      <BarraNavegacao />
+    );
+  }
+}
+
+AppRegistry.registerComponent('app5', () => app5);
