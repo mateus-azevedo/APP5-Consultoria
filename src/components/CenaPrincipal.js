@@ -1,11 +1,18 @@
 import React, { Component } from 'react';
 import {
   View,
-  StatusBar
+  StatusBar,
+  Image
 } from 'react-native';
 
 // importar o componente barra navegação
 import BarraNavegacao from './BarraNavegacao';
+
+const logo = require('../imgs/logo.png');
+const menuCliente = require('../imgs/menu_cliente.png');
+const menuContato = require('../imgs/menu_contato.png');
+const menuEmpresa = require('../imgs/menu_empresa.png');
+const menuServico = require('../imgs/menu_servico.png');
 
 export default class CenaPrincipal extends Component {
   render() {
@@ -16,6 +23,13 @@ export default class CenaPrincipal extends Component {
         />
         
         <BarraNavegacao />
+
+        <Image source={logo} />
+        <Image source={menuCliente} />
+        <Image source={menuContato} />
+        <Image source={menuEmpresa} />
+        <Image source={menuServico} />
+
       </View>
     );
   }
