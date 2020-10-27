@@ -2,22 +2,14 @@ import React, { Component } from 'react';
 import {
   AppRegistry,
   View,
-  StatusBar
 } from 'react-native';
 
-// importar o componente barra navegação
-import BarraNavegacao from './src/components/BarraNavegacao';
+import CenaPrincipal from './src/components/CenaPrincipal';
 
 export default class app5 extends Component {
   render() {
     return(
-      <View>
-        <StatusBar 
-          backgroundColor= '#CCC'
-        />
-        
-        <BarraNavegacao />
-      </View>
+      <CenaPrincipal />
     );
   }
 }
