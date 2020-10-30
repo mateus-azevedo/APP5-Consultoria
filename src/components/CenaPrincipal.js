@@ -3,7 +3,8 @@ import {
   View,
   StatusBar,
   Image,
-  StyleSheet
+  StyleSheet,
+  TouchableHighlight
 } from 'react-native';
 
 // importar o componente barra navegação
@@ -17,7 +18,7 @@ const menuServico = require('../imgs/menu_servico.png');
 
 export default class CenaPrincipal extends Component {
   render() {
-    return(
+    return (
       <View>
         <StatusBar 
           backgroundColor= '#CCC'
@@ -31,7 +32,15 @@ export default class CenaPrincipal extends Component {
 
         <View style={styles.menu} >
           <View style={styles.menuGrupo}>
-            <Image style={styles.imgMenu} source={menuCliente} />
+
+            <TouchableHighlight
+              onPress={() => {
+                this.props.navigator.push({ id: 'b' });
+              }}
+            >
+              <Image style={styles.imgMenu} source={menuCliente} />
+            </TouchableHighlight>
+
             <Image style={styles.imgMenu} source={menuContato} />
           </View>
 

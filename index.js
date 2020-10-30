@@ -13,7 +13,7 @@ export default class app5 extends Component {
           /* definir a Cena com base na rota */
           if (route.id === 'a') {
             // exibir a CenaPrincipal
-            return <CenaPrincipal />;
+            return <CenaPrincipal navigator={navigator} />;
           }
 
           if (route.id === 'b') {
