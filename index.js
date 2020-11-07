@@ -18,7 +18,7 @@ export default class app5 extends Component {
 
           if (route.id === 'b') {
             // exibir a CenaClientes
-            return <CenaClientes />;
+            return <CenaClientes navigator={navigator} />;
           }
         }}
       />
