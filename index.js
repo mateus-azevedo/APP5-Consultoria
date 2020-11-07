@@ -13,30 +13,24 @@ export default class app5 extends Component {
       <Navigator
         initialRoute={{id: 'principal'}}
         renderScene={(route, navigator) => {
-          /* definir a Cena com base na rota */
-          if (route.id === 'principal') {
-            // exibir a CenaPrincipal
-            return <CenaPrincipal navigator={navigator} />;
-          }
+          switch (route.id) {
+            case 'principal':
+              return <CenaPrincipal navigator={navigator} />;
 
-          if (route.id === 'clientes') {
-            // exibir a CenaClientes
-            return <CenaClientes navigator={navigator} />;
-          }
+            case 'clientes':
+              return <CenaClientes navigator={navigator} />;
 
-          if (route.id === 'contatos') {
-            // exibir a CenaContatos
-            return <CenaContatos navigator={navigator} />;
-          }
+            case 'contatos':
+              return <CenaContatos navigator={navigator} />;
 
-          if (route.id === 'empresa') {
-            // exibir a CenaEmpresa
-            return <CenaEmpresa navigator={navigator} />;
-          }
+            case 'empresa':
+              return <CenaEmpresa navigator={navigator} />;
 
-          if (route.id === 'servicos') {
-            // exibir a CenaServicos
-            return <CenaServicos navigator={navigator} />;
+            case 'servicos':
+              return <CenaServicos navigator={navigator} />;
+
+            default:
+              return false;
           }
         }}
       />
