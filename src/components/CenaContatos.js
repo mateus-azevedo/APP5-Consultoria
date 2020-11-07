@@ -15,7 +15,7 @@ const detalheContatos = require('../imgs/detalhe_contato.png');
 export default class CenaContatos extends Component {
   render() {
     return(
-      <View>
+      <View style={styles.screenBackground}>
         <StatusBar 
           backgroundColor= '#CCC'
         />
@@ -39,6 +39,10 @@ export default class CenaContatos extends Component {
 }
 
 const styles = StyleSheet.create({
+  screenBackground: { 
+    flex: 1, 
+    backgroundColor: '#FFF'
+  },
   cabecalho: {
     flexDirection: 'row',
     marginTop: 20

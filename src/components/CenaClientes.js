@@ -17,7 +17,7 @@ const cliente2 = require('../imgs/cliente2.png');
 export default class CenaClientes extends Component {
   render() {
     return(
-      <View>
+      <View style={styles.screenBackground}>
         <StatusBar 
           backgroundColor= '#CCC'
         />
@@ -45,6 +45,10 @@ export default class CenaClientes extends Component {
 }
 
 const styles = StyleSheet.create({
+  screenBackground: { 
+    flex: 1, 
+    backgroundColor: '#FFF'
+  },
   cabecalho: {
     flexDirection: 'row',
     marginTop: 20

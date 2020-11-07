@@ -15,7 +15,7 @@ const detalheEmpresa = require('../imgs/detalhe_empresa.png');
 export default class CenaEmpresa extends Component {
   render() {
     return(
-      <View>
+      <View style={styles.screenBackground}>
         <StatusBar 
           backgroundColor= '#CCC'
         />
@@ -37,6 +37,10 @@ export default class CenaEmpresa extends Component {
 }
 
 const styles = StyleSheet.create({
+  screenBackground: { 
+    flex: 1, 
+    backgroundColor: '#FFF'
+  },
   cabecalho: {
     flexDirection: 'row',
     marginTop: 20
